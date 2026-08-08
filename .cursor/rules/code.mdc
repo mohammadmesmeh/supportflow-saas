@@ -1,0 +1,129 @@
+---
+description: Core development guidelines for SupportFlow
+alwaysApply: true
+---
+
+# SupportFlow Development Rules
+
+## Project Overview
+
+SupportFlow is a multi-tenant customer support SaaS platform designed to help companies manage customer tickets, conversations, teams, knowledge bases, and support analytics.
+
+The platform will also include AI-assisted features that help support agents work more efficiently.
+
+## Technology Stack
+
+The planned stack includes:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- PostgreSQL
+- Prisma
+- Authentication
+- AI API integration
+- Git and GitHub
+
+## Development Principles
+
+- Write clean, readable, and maintainable code.
+- Use TypeScript throughout the project.
+- Prefer simple solutions over unnecessary complexity.
+- Build reusable components.
+- Avoid duplicated code.
+- Keep components focused on a single responsibility.
+- Follow modern Next.js and React best practices.
+- Prefer server-side functionality when appropriate.
+- Use client-side code only when interactivity requires it.
+
+## TypeScript
+
+- Avoid `any` unless there is a strong technical reason.
+- Define explicit types for important data structures.
+- Keep shared types reusable.
+- Prefer type-safe functions and API contracts.
+
+## Components
+
+- Use PascalCase for React component names.
+- Keep components small and focused.
+- Build reusable UI components.
+- Avoid unnecessary prop drilling.
+- Separate presentation from business logic when appropriate.
+
+## UI and UX
+
+- Build responsive interfaces.
+- Prioritize accessibility.
+- Maintain consistent spacing and typography.
+- Include loading, error, and empty states.
+- Maintain a clear visual hierarchy.
+- Support desktop, tablet, and mobile experiences.
+- Prefer reusable design patterns over one-off implementations.
+
+## Data and API
+
+- Validate user input.
+- Keep sensitive credentials on the server.
+- Never expose API keys to the client.
+- Protect authenticated resources.
+- Enforce workspace-level data isolation.
+- Handle API errors gracefully.
+
+## AI Integration
+
+AI features should assist users rather than replace human decision-making.
+
+AI-generated content must be reviewable by a human before being sent to customers.
+
+AI integrations should:
+
+- Keep API credentials secure.
+- Handle API failures gracefully.
+- Provide loading and error states.
+- Avoid exposing unnecessary sensitive data.
+- Clearly distinguish AI-generated suggestions from human-generated content.
+
+## Security
+
+- Never commit secrets or API keys.
+- Use environment variables for sensitive configuration.
+- Validate server-side operations.
+- Apply proper authentication and authorization.
+- Prevent users from accessing data belonging to another workspace.
+
+## Git
+
+Use Conventional Commits.
+
+Examples:
+
+- `feat: add ticket management`
+- `fix: handle ticket loading state`
+- `docs: update project documentation`
+- `chore: update dependencies`
+- `refactor: simplify ticket service`
+
+Keep commits focused and descriptive.
+
+## Naming
+
+- Use PascalCase for React components.
+- Use camelCase for variables and functions.
+- Use descriptive names.
+- Avoid unnecessary abbreviations.
+- Use kebab-case for route segments where appropriate.
+
+## Cursor Agent Behavior
+
+When modifying the project:
+
+1. Understand the existing code before making changes.
+2. Follow the existing project conventions.
+3. Prefer small, focused changes.
+4. Avoid unnecessary dependencies.
+5. Do not modify unrelated files.
+6. Preserve existing functionality unless the task requires changing it.
+7. Explain significant implementation decisions when useful.
+8. Run appropriate checks after making changes.
